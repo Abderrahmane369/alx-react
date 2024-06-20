@@ -1,0 +1,10 @@
+#counter {
+    display: inline;
+    font-weight: bold;
+}
+
+#logo {
+    width: 200;
+    height: 200;
+    background-image: url('../assets/holberton-logo.jpg');
+}
