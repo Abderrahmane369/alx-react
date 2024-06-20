@@ -51,8 +51,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: "./index.html"
+            filename: "index.html"
         })
-    ],
-    performance: { hints: false }
+    ]
 };

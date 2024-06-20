@@ -1,6 +1,6 @@
 import $ from "jquery";
 import { debounce } from "lodash";
-import '../css/main.css';
+import '../css/main.css'; 
 
 var count = 0;
 function updateCounter() {
