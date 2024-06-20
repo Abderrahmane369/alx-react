@@ -3,11 +3,9 @@ import { debounce } from "lodash";
 
 var count = 0;
 function updateCounter() {
-    $("button").on("click", () => {
-        count++;
+    count++;
 
-        $("#count").text(`${count} clicks on the button`);
-    });
+    $("#count").text(`${count} clicks on the button`);
 }
 
 $(document).ready(function() {
