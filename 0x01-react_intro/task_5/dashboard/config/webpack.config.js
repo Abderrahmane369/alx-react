@@ -2,10 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: "developement",
-    entry: path.resolve(__dirname, "src/index.js"),
+    mode: "development",
+    entry: path.resolve(__dirname, "../src/index.js"),
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "../dist"),
         filename: "bundle.js",
         clean: true
     },
@@ -28,7 +28,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Nosquare",
-            template: "dist/index.html"
+            template: "../dist/index.html"
         })
     ]
 };
