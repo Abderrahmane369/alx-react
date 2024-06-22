@@ -5,14 +5,14 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
         clean: true
     },
     devtool: 'inline-source-map',
     devServer: {
         static: {
-            directory: path.join(__dirname, '../dist'),
+            directory: path.join(__dirname, './dist'),
         },
         hot: true
     },
@@ -31,7 +31,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Nosquare',
-            template: path.resolve(__dirname, '../dist/index.html')
+            template: path.resolve(__dirname, './dist/index.html')
         })
     ]
 };
