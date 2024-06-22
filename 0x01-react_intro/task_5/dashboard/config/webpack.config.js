@@ -1,34 +1,36 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "development",
-    entry: path.resolve(__dirname, "../src/index.js"),
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, "../dist"),
-        filename: "bundle.js",
+        path: path.resolve(__dirname, '../dist'),
+        filename: 'bundle.js',
         clean: true
     },
-    devtool: "inline-source-map",
+    devtool: 'inline-source-map',
     devServer: {
+        static: {
+            directory: path.join(__dirname, '../dist'),
+        },
         hot: true
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "assets/resource"
+                type: 'asset/resource'
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Nosquare",
-            template: "./dist/index.html"
+            title: 'Nosquare',
+            template: path.resolve(__dirname, '../dist/index.html')
         })
     ]
 };
