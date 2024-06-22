@@ -28,7 +28,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Nosquare",
-            template: "../dist/index.html"
+            template: "./dist/index.html"
         })
     ]
 };
